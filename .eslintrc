@@ -15,5 +15,14 @@
     // 1 is warning, 2 is error
     "no-console": 1,
     "prettier/prettier": 2
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts"],
+      "env": {
+        "jest": true,
+        "node": true
+      }
+    }
+  ]
 }
