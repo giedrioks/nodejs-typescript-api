@@ -2,10 +2,10 @@ import {
   IExchangeRateInput,
   IExchangeRateOutput,
   IExchangeRateProvider,
-} from "../IExchangeRateProvider";
-import { IConfig } from "../../common/IConfig";
-import fetch, { Response } from "node-fetch";
-import { ICacheService } from "../ICacheService";
+} from '../IExchangeRateProvider';
+import { IConfig } from '../../common/IConfig';
+import fetch, { Response } from 'node-fetch';
+import { ICacheService } from '../ICacheService';
 
 export class ExchangeRateProvider implements IExchangeRateProvider {
   private config: IConfig;

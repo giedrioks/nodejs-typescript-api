@@ -1,4 +1,4 @@
-import { ICacheService } from "../ICacheService";
+import { ICacheService } from '../ICacheService';
 
 export class LruCacheService<T> implements ICacheService<T> {
   values: Map<string, T> = new Map<string, T>();

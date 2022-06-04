@@ -1,5 +1,5 @@
-import express, { Request, Response } from "express";
-import Logger from "../common/Logger";
+import express, { Request, Response } from 'express';
+import Logger from '../common/Logger';
 const logger = Logger();
 
 export abstract class BaseController {
@@ -13,7 +13,7 @@ export abstract class BaseController {
       await this.internalExecution(req, res);
     } catch (err) {
       logger.error(`[BaseController] - Unexpected error`, { err });
-      this.error(res, "An unexpected error occurred");
+      this.error(res, 'An unexpected error occurred');
     }
   }
 
@@ -27,7 +27,7 @@ export abstract class BaseController {
 
   public ok<T>(res: Response, body?: T) {
     if (body) {
-      return res.type("application/json").status(200).json(body);
+      return res.type('application/json').status(200).json(body);
     } else {
       return res.sendStatus(200);
     }
@@ -37,7 +37,7 @@ export abstract class BaseController {
     return BaseController.jsonResponse(
       res,
       400,
-      message ? message : "Bad request"
+      message ? message : 'Bad request'
     );
   }
 

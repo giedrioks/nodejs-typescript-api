@@ -1,4 +1,4 @@
-import pino, { Logger } from "pino";
+import pino, { Logger } from 'pino';
 
 export interface ILogger {
   debug(message: string, data?: object): void;

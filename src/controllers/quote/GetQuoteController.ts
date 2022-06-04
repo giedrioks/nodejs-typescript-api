@@ -1,9 +1,9 @@
-import { Request, Response } from "express";
-import { BaseController } from "../BaseController";
+import { Request, Response } from 'express';
+import { BaseController } from '../BaseController';
 import {
   IExchangeOutput,
   IExchangeService,
-} from "../../services/IExchangeService";
+} from '../../services/IExchangeService';
 
 interface ValidationResult {
   isValid: boolean;
@@ -21,7 +21,7 @@ interface ValidationInput {
 
 export class GetQuoteController extends BaseController {
   private exchangeService: IExchangeService;
-  private allowedCurrencies: string[] = ["USD", "EUR", "GBP", "ILS"];
+  private allowedCurrencies: string[] = ['USD', 'EUR', 'GBP', 'ILS'];
 
   constructor(exchangeService: IExchangeService) {
     super();
@@ -54,19 +54,19 @@ export class GetQuoteController extends BaseController {
       !input.baseAmount ||
       !this.isValidInteger(input.baseAmount)
     )
-      return { isValid: false, error: "Invalid input parameters", params: {} };
+      return { isValid: false, error: 'Invalid input parameters', params: {} };
 
     if (!this.allowedCurrencies.includes(input.baseCurrency.toUpperCase()))
       return {
         isValid: false,
-        error: "baseCurrency not supported",
+        error: 'baseCurrency not supported',
         params: {},
       };
 
     if (!this.allowedCurrencies.includes(input.quoteCurrency.toUpperCase()))
       return {
         isValid: false,
-        error: "quoteCurrency not supported",
+        error: 'quoteCurrency not supported',
         params: {},
       };
 

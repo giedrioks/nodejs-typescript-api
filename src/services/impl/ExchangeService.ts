@@ -2,11 +2,11 @@ import {
   IExchangeInput,
   IExchangeOutput,
   IExchangeService,
-} from "../IExchangeService";
+} from '../IExchangeService';
 import {
   IExchangeRateOutput,
   IExchangeRateProvider,
-} from "../IExchangeRateProvider";
+} from '../IExchangeRateProvider';
 
 export class ExchangeService implements IExchangeService {
   private exchangeRateProvider: IExchangeRateProvider;

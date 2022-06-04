@@ -1,7 +1,7 @@
-import express, { Express } from "express";
-import { IConfig } from "./common/IConfig";
-import middlewares from "./middlewares";
-import routes from "./routes";
+import express, { Express } from 'express';
+import { IConfig } from './common/IConfig';
+import middlewares from './middlewares';
+import routes from './routes';
 
 export class Application {
   config: IConfig;

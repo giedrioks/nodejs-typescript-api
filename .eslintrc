@@ -14,7 +14,12 @@
   "rules": {
     // 1 is warning, 2 is error
     "no-console": 1,
-    "prettier/prettier": 2
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ]
   },
   "overrides": [
     {
