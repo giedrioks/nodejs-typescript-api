@@ -5,7 +5,7 @@ import { Application } from './Application';
 const logger = Logger();
 const config = Configuration();
 const app = new Application(config).getInstance();
-logger.info('config', { ...config });
+
 app.listen(config.app.port, () => {
   logger.info(
     `️[server]: Server is running at http://localhost:${config.app.port}`
