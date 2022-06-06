@@ -15,7 +15,9 @@ export default (): IConfig => ({
   },
   providers: {
     exchangeRate: {
-      url: process.env.EXCHANGE_RATE_PROVIDER_URL,
+      url:
+        process.env.EXCHANGE_RATE_PROVIDER_URL ||
+        'https://api.exchangerate-api.com/v4/latest',
     },
   },
 });
