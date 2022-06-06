@@ -18,6 +18,10 @@ Run project in developer mode:
 npm run dev
 ```
 
+To exchange currency open below URL in browser:
+
+http://localhost:3000/quote?baseCurrency=USD&quoteCurrency=EUR&baseAmount=200 
+
 Run project in production mode (variables to be defined separately):
 ```js
 npm run build
