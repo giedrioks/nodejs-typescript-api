@@ -29,6 +29,16 @@ npm run start
 ```
 
 ## Helpful commands
+Run tests:
+```js
+npm run test
+```
+
+Run tests with coverage:
+```js
+npm run test:coverage
+```
+
 Run eslint on project:
 ```js
 npm run lint
